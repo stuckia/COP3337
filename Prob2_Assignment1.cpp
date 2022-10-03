@@ -1,19 +1,16 @@
+#include <iostream>
 #include <cmath>
 #include <iomanip>
-#include <iostream>
 
-int main() {
-  double side; // initialize variables
-  double area;
+int main()
+{
+	double side;
+	std::cout << "Enter the side: ";
+	std::cin >> side;
 
-  std::cout << "Enter the side: "; // retrieve side value
-  std::cin >> side;
+	double area = (6 * exp(side)) / (4 * tan(3.14 / 6));
 
-  area = (6.0 * std::pow(side, 2)) /
-         (4.0 * tan(M_PI / 6.0)); // calculate the area using side
+	std::cout << "The area of the hexagon is " << std::setprecision(2) << area << std::endl;
 
-  std::cout << "The area of the hexagon is " << std::setprecision(4)
-            << area; // print the area
-
-  return 0;
+	return 0;
 }
